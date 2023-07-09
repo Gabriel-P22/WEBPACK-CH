@@ -1,5 +1,29 @@
 $primary: #0099cc;
+$inputError: #ff0000;
 
-.title {
-    color: $primary;
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#index {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

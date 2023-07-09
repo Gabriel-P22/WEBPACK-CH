@@ -1,0 +1,44 @@
+@import "./style.scss";
+
+.default-div {
+    background-color: $primary;
+    height: 100%;
+    border-radius: 20px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.div-email-login, .div-password-login {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-email-login, .input-password-login {
+    margin-bottom: 1em;
+}
+
+.input-email-login, .input-password-login {
+    width: 60%;
+    height: 2em;
+    border-radius: 10px;
+}
+
+.login-button {
+    width: 40%;
+    height: 20%;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+.login-button:active {
+    border-width: 3px;
+    border-color: $primary;
+}

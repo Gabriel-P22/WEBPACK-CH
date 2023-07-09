@@ -1,10 +1,5 @@
-import '../css/style.scss'
+import { loginPage } from "./login.js";
 
-const textComponent = () => {
-    const component = document.createElement('h1');
-    component.innerText = 'Hello world';
-    component.classList.add('title');
-    return component
-};
+export const index = document.querySelector("#index");
 
-document.body.appendChild(textComponent())
+loginPage()
