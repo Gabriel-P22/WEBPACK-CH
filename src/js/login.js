@@ -1,36 +1,24 @@
 import '../css/style.scss';
 import '../css/login.scss';
 
-import { Component } from '../components/BaseInputComponent/input.js';
+import { InputBoxComponent } from '../components/BaseInputComponent/input.js';
 import { index } from '../js/index';
 import { LoginButton } from '../components/LoginButtonComponent/index.js';
 import { DefaultDiv } from '../components/BaseDivComponent/index.js';
-import { getEmail, setEmail } from '../validation/validation.js';
 
 export const loginPage = () => {
     let hasError = false;
-
-    const emailInput = Component("input-email-login", "div-email-login", "label-email-login", hasError, "Email:");
-    const passwordInput = Component("input-password-login", "div-password-login", "label-password-login", hasError, "Password:");
+    
     const defaultDiv = DefaultDiv();
     const loginButton = LoginButton("login", "Logar", "login-button");
-    
+
     index.appendChild(defaultDiv);
-    defaultDiv.appendChild(emailInput);
-    defaultDiv.appendChild(passwordInput);
+    defaultDiv.appendChild(InputBoxComponent("input-email-login", "div-email-login", "label-email-login", hasError, "Email:"));
+    defaultDiv.appendChild(InputBoxComponent("input-password-login", "div-password-login", "label-password-login", hasError, "Password:"));
     defaultDiv.appendChild(loginButton);
     
     loginButton.addEventListener('click', () => {
-        const emailInput = document.querySelector('.input-email-login');
-        const passwordInput = document.querySelector('.input-password-login');
-        setAccount(emailInput.value, passwordInput.value);
-        
+        const email = document.querySelector('.input-email-login').value;
+        const password = document.querySelector('.input-password-login').value;
     });
-    
-    const setAccount = (email, password) => {
-        console.log(`Your password: ${password}`);
-        console.log(`Your email: ${email}`);
-        setEmail(email);
-        console.log(`ABC ${getEmail()}`);
-    }
 }

@@ -1,4 +1,4 @@
-export const Component = (classNameInput, classNameDiv, classNameLabel, hasError, componentTitle) => {
+export const InputBoxComponent = (classNameInput, classNameDiv, classNameLabel, hasError, componentTitle) => {
     const div = document.createElement('div');
     
     const label = labelComponent(classNameLabel, hasError, componentTitle)

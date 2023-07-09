@@ -1,20 +1,17 @@
 let password;
 let email;
 
-export const getEmail = () => {
-    return email;
+const correctPassword = 123;
+const correctEmail = "email@email.com";
+
+export const Oauth = async (email, password) => {
+    if (email !== correctEmail) {
+        return { status: 400, response: 'Email incorrect' }
+    }
+
+    if (password !== correctPassword) {
+        return { status: 400, response: 'Password incorrect' }
+    }
+
+    return { status: 200, response: 'JWT' }
 }
-
-export const setEmail = (email) => {
-    this.email = email;
-}
-
-export const getPassword = () => {
-    return email;
-}
-
-export const setPassword = (password) => {
-    this.password = password;
-}
-
-
